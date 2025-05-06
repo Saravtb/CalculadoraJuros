@@ -4,7 +4,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:background="#E0F7FA"> <!-- Fundo com cor sólida adicionada -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -97,8 +98,7 @@
             android:src="@drawable/calculadora_feliz_com_gesto_114060445"
             android:scaleType="fitCenter" />
 
-
-
     </LinearLayout>
 </ScrollView>
+
 
