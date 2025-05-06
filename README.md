@@ -106,9 +106,5 @@ Montante com juros compostos: R$1795.86
 
 
 
-## 📄 Licença
 
-Este projeto ainda **não possui uma licença definida**. Sinta-se à vontade para sugerir uma!
-
----
 
