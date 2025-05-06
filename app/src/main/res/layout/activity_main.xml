@@ -4,46 +4,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="#E0F7FA"> <!-- Fundo com cor sólida adicionada -->
+    android:background="#B1C7F2"
+    android:padding="24dp"> <!-- Fundo com cor sólida adicionada -->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
-
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/radioJuros"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Calcular Juros" />
-
-            <RadioButton
-                android:id="@+id/radioMontante"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Calcular Montante" />
-
-            <RadioButton
-                android:id="@+id/radioCapital"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Calcular Capital" />
-
-            <RadioButton
-                android:id="@+id/radioTempo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Calcular Tempo (meses)" />
-        </RadioGroup>
 
         <EditText
             android:id="@+id/editCapital"
@@ -77,6 +45,38 @@
             android:hint="Montante (R$)"
             android:inputType="numberDecimal" />
 
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioJuros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calcular Juros" />
+
+            <RadioButton
+                android:id="@+id/radioMontante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calcular Montante" />
+
+            <RadioButton
+                android:id="@+id/radioCapital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calcular Capital" />
+
+            <RadioButton
+                android:id="@+id/radioTempo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calcular Tempo (meses)" />
+        </RadioGroup>
+
         <Button
             android:id="@+id/botaoCalcular"
             android:layout_width="wrap_content"
@@ -98,8 +98,8 @@
             android:id="@+id/minhaImagem"
             android:layout_width="200dp"
             android:layout_height="180dp"
-            android:src="@drawable/calculadora_feliz_com_gesto_114060445"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/calculadora_feliz_com_gesto_114060445" />
 
     </LinearLayout>
 </ScrollView>
