@@ -81,7 +81,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Calcular" />
+            android:text="Calcular"
+            android:textColor="#EF980C"
+            android:textColorLink="#E41515"
+            app:rippleColor="#C10C0C" />
 
         <TextView
             android:id="@+id/textResultado"
