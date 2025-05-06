@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,15 +9,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/radioJuros"
@@ -47,47 +48,57 @@
             android:id="@+id/editCapital"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:hint="Capital (R$)"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="12dp"/>
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/editTaxa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:hint="Taxa de juros (%)"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="12dp"/>
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/editTempo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:hint="Tempo (meses)"
-            android:inputType="number"
-            android:layout_marginBottom="12dp"/>
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/editMontante"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:hint="Montante (R$)"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="12dp"/>
+            android:inputType="numberDecimal" />
 
         <Button
             android:id="@+id/botaoCalcular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calcular"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:text="Calcular" />
 
         <TextView
             android:id="@+id/textResultado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Resultado aparecerá aqui"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/minhaImagem"
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:src="@drawable/calculadora_feliz_com_gesto_114060445"
+            android:scaleType="fitCenter" />
+
+
+
     </LinearLayout>
 </ScrollView>
 
