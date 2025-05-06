@@ -87,6 +87,15 @@
             android:textColorLink="#E41515"
             app:rippleColor="#C10C0C" />
 
+        <Button
+            android:id="@+id/btnLimpar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:minHeight="48dp"
+            android:text="@string/btn_limpar" />
+
+
         <TextView
             android:id="@+id/textResultado"
             android:layout_width="wrap_content"

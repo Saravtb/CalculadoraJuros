@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText editCapital, editTaxa, editTempo, editMontante;
     TextView textResultado;
-    Button botaoCalcular;
+    Button botaoCalcular, btnLimpar;
     RadioButton radioJuros, radioMontante, radioCapital, radioTempo;
     RadioGroup radioGroup;
 
@@ -19,21 +19,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Ligando componentes
-        editCapital = findViewById(R.id.editCapital);
-        editTaxa = findViewById(R.id.editTaxa);
-        editTempo = findViewById(R.id.editTempo);
-        editMontante = findViewById(R.id.editMontante);
+        editCapital   = findViewById(R.id.editCapital);
+        editTaxa      = findViewById(R.id.editTaxa);
+        editTempo     = findViewById(R.id.editTempo);
+        editMontante  = findViewById(R.id.editMontante);
         textResultado = findViewById(R.id.textResultado);
         botaoCalcular = findViewById(R.id.botaoCalcular);
+        btnLimpar     = findViewById(R.id.btnLimpar);
 
-        radioJuros = findViewById(R.id.radioJuros);
-        radioMontante = findViewById(R.id.radioMontante);
-        radioCapital = findViewById(R.id.radioCapital);
-        radioTempo = findViewById(R.id.radioTempo);
-        radioGroup = findViewById(R.id.radioGroup);
+        radioJuros     = findViewById(R.id.radioJuros);
+        radioMontante  = findViewById(R.id.radioMontante);
+        radioCapital   = findViewById(R.id.radioCapital);
+        radioTempo     = findViewById(R.id.radioTempo);
+        radioGroup     = findViewById(R.id.radioGroup);
 
-        // Listener para atualizar os campos com base na seleção
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -47,16 +46,28 @@ public class MainActivity extends AppCompatActivity {
                 calcular();
             }
         });
+
+
+        // Limpar os dados colocados.
+        btnLimpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editCapital.setText("");
+                editTaxa.setText("");
+                editTempo.setText("");
+                editMontante.setText("");
+                textResultado.setText("");
+                radioGroup.clearCheck();
+            }
+        });
     }
 
     private void atualizarCampos(int checkedId) {
-        // Habilita todos os campos
         editCapital.setEnabled(true);
         editTaxa.setEnabled(true);
         editTempo.setEnabled(true);
         editMontante.setEnabled(true);
 
-        // Limpa todos os campos desabilitados
         if (checkedId == R.id.radioMontante) {
             editMontante.setEnabled(false);
             editMontante.setText("");
@@ -67,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
             editTempo.setEnabled(false);
             editTempo.setText("");
         }
-        // Se for calcular Juros, não há campo específico a desativar
     }
 
     private void calcular() {
@@ -116,4 +126,3 @@ public class MainActivity extends AppCompatActivity {
         return 0;
     }
 }
-

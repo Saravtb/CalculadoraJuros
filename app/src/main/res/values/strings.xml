@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CalculadoraJuros</string>
+    <string name="btn_limpar">Limpar</string>
 </resources>
